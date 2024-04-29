@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Delete Post</h1>
+    <form action="" method="post" novalidate>
+        {{ form.hidden_tag() }}
+        <p>Confirm you want to delete post {{ post.job }}</p>
+
+        <p>{{ form.submit() }}</p>
+    </form>
+{% endblock %}

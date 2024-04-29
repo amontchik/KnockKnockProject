@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+<body id="background">
+  <table id = "searchbox">
+    <tr valign="top">
+    <td>
+       <form action="" method="post" novalidate>
+            Search {{ form.hidden_tag() }}
+            {{ form.searchbar(size=32) }} {{ form.find() }}
+      </form>
+      </td>
+    </tr>
+  </table>
+</body>
+{% endblock %}

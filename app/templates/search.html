@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h2>Search Results:</h2>
+  {% for result in results %}
+  {% for post in results %}
+        {% include '_viewposts.html' %}
+    {% endfor %}
+    
+  {% endfor %}
+{% endblock %}
+
+<a href="{{ url_for('profilePage', username=result.author.username) }}">{{ result.author.firstName }} {{ result.author.lastName }}</a>
+<p>Job: {{ result.job }}</p>
+<p>Description of the Job: {{ result.description }}</p>
+<p>Contact Info: {{ result.contactInfo }}</p>
+<p>Goal: {{ result.goal }}</p> 
+<p>Price: {{ result.price }}</p> 
+<p>Category: {{ result.categories }}</p> 
+<p>Distance:  {{ result.distance }} miles</p>
+<p><a href="{{ url_for('requestJob', username=result.author.username, price = result.price) }}"> Request This Job!</a></p>
+<!-- <p>id:  {{ result.id }} </p> -->
+
+  

@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    {% for post in posts %}
+        {% include '_viewposts.html' %}
+    {% endfor %}
+
+{% endblock %}

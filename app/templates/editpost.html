@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Edit Post</h1>
+    <h3>Leave a field blank if you do not want to change that field. </h3>
+    <form action="" method="post" novalidate>
+        {{ form.hidden_tag() }}
+          <p>
+            {{ form.job.label }}<br>
+            <p> Old: {{post.job}} </p>
+            <p>{{ form.job(size=32) }}</p>
+          </p>
+          <p>
+            {{ form.description.label }}<br>
+            <p> Old: {{post.description}} </p>
+            <p>{{ form.description(size=50) }}</p>
+            </p>
+           <p>
+            {{ form.location.label }}<br>
+            <p> Old: {{post.location}} </p>
+            <p>{{ form.location(size=50) }}</p>
+            </p>
+           <p>
+            {{ form.goal.label }}<br>
+            <p> Old: {{post.goal}} </p>
+            <p>{{ form.goal(size=32) }}</p>
+            </p>
+            <p>
+              {{ form.price.label }}<br>
+              <p> Old: {{post.price}} </p>
+              <p>{{ form.price(size=32) }}</p>
+              </p>
+            <p>
+              {{ form.categories.label }}<br>
+              <p> Old: {{post.categories}} </p>
+              <p>{{ form.categories(size=1) }}</p>
+            </p>
+            
+        <p>{{ form.submit() }}</p>
+    </form>
+{% endblock %}

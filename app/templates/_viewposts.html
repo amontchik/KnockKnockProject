@@ -1,0 +1,25 @@
+<table> 
+    <tr valign="top"></tr>
+        <td> <img src="{{ post.author.avatar(150) }}">
+        <td>  
+            <br>
+            <First style = "font-weight:bold; ">Name:</First> <a href="{{ url_for('profilePage', username=post.author.username) }}">{{ post.author.firstName }} {{ post.author.lastName }}</a><br>
+            <span style = "font-weight:bold; ">Job: </span> <span>{{ post.job }}</span> <br>
+            <span style = "font-weight:bold; ">Description: </span> <span>{{ post.description }}</span> <br>
+            <span style = "font-weight:bold; ">Location: </span> <span>{{ post.location }}</span> <br>
+            <span style = "font-weight:bold; ">Goal: </span> <span>{{ post.goal }}</span> <br>
+            <span style = "font-weight:bold; ">Price: </span> <span>{{ post.price }}</span> <br>
+            <span style = "font-weight:bold; ">Category: </span> <span>{{ post.categories }}</span> <br>
+            <span style = "font-weight:bold; ">Distance: </span> <span>{{ post.distance }} miles</span> <br>
+            <p><a href="{{ url_for('requestJob', username=post.author.username, price = post.price) }}"> Request this job</a></p>
+            
+           {% if current_user == post.author: %}
+                <a href="{{ url_for('editPost', id=post.id) }}">Edit post</a>
+            {% endif %}
+            {% if current_user == post.author: %}
+                <a href="{{ url_for('deletePost', id=post.id) }}">Delete post</a>
+            {% endif %}
+           
+        </td>
+    </td>
+</table>

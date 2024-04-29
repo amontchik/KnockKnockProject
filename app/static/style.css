@@ -1,0 +1,179 @@
+html, body::-webkit-scrollbar {
+  height: 100%;
+  width: 100%;
+  font-family: 'Lato', sans-serif;
+  background-color: #FAF9F6;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+p {
+  color: black;
+  margin-left: 150px;
+  margin-right: 150px;
+}
+
+
+#logo {
+  width: 300px;
+  height: 80px;
+  margin-left: 130px;
+  float: left;
+}
+
+div {
+  width: 300px;
+  border: 1px solid black;
+  padding: 15px;
+  margin-left: 150px;
+  margin-right: 150px;
+}
+
+#flash {
+  background-color: black;
+  color: white;
+}
+
+#post-image {
+  margin-top: 0px;
+  height: 100px;
+  width: 100px;
+  margin-right: 1000px;
+  margin-left: 0px;
+  vertical-align: middle;
+  padding: 0px;
+}
+
+table {
+  width: 800px;
+  border: 2px solid #E4793C;
+  padding: 15px;
+  margin-left: 150px;
+  margin-right: 150px;
+  margin-top: 20px;
+}
+
+#searchbox {
+  width: 800px;
+  border: 2px solid #E4793C;
+  padding: 15px;
+  margin: auto;
+  margin-top: 175px;
+  background-color: white;
+}
+
+h1 {
+  font-size: 20px;
+  text-align: left;
+  margin-left: 150px;
+  color: black;
+}
+
+h2 {
+  font-size: 20px;
+  text-align: left;
+  margin-left: 150px;
+  color: black;
+}
+
+h3 {
+  font-size: 20px;
+  text-align: left;
+  margin-left: 150px;
+  color: black;
+}
+
+#background {
+  background-image: url("mowingthelawn.jpeg");
+  background-color: #cccccc;
+  height: 1000px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+ }
+
+header {
+  background-color: #e4793c;
+  padding: 10px;
+  vertical-align: middle;
+}
+
+
+
+nav {
+  padding: 25px;
+  padding-bottom: 40px;
+}
+
+nav a {
+  padding-right: 15px;
+  color: #FAF9F6;
+  text-decoration: none;
+
+}
+
+
+
+.container:hover {
+  filter: brightness(150%);
+}
+
+/* form styling */
+form {
+  margin-top: 10px;
+  align-self: center;
+  background: #FAF9F6; 
+  }
+
+  input, textarea {
+  width: 100%;
+  padding-bottom: 8px;
+  padding-top: 8px;
+  margin-bottom: 20px;
+  border: 1px solid #1c87c9;
+  outline: none;
+  float: left;
+  }
+  #search {
+    margin-left: 20px;
+  }
+  
+  #background {
+    background-image: url("mowingthelawn.jpeg");
+    background-color: #cccccc;
+    height: 1000px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 700px;
+   }
+
+  .checkbox {
+    height: 15px;
+    width: 15px;
+    float: left;
+    margin-bottom: 5px;
+}
+
+
+
+  button:hover {
+  background: #2371a0;
+  }    
+  .menu ul{
+    margin-bottom: 10px;
+  }
+  .menu li {
+    display: inline;
+    float: right;    
+  }
+  .menu li + li {
+    float: right;
+    display: inline;
+  }
+  .menu li a {
+    color: #444;
+    text-decoration: none;
+    display: inline;
+  }
+

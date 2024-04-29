@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Welcome to KnockKnock</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}"/>
+        <style>      
+        </style>
+    </head>
+    <body>
+        <header>
+          <a href="{{ url_for('homePage') }}"><img src="/static/knockknocklogo.png" id = "logo"/></a>
+              <strong><nav>
+                <ul class="menu">
+                  {% if current_user.is_anonymous %}
+                  <li><a href="{{ url_for('loginPage') }}">Login</a></li>
+                  <li><a href="{{ url_for('signupPage') }}">Sign Up</a></li>
+                  {% else %}
+                  <li><a href="{{ url_for('logout') }}">Logout</a></li>
+                  <li><a href="{{ url_for('profilePage', username=current_user.username) }}">Profile</a></li>
+                  <li><a href="{{ url_for('postPage') }}">Post</a></li>
+                  {% endif %}
+                  <li><a href="{{ url_for('contactUsPage') }}">Contact Us</a></li>
+                  <li><a href="{{ url_for('directionsPage') }}">Directions</a></li>
+                  <li><a href="{{ url_for('viewPostPage') }}">View Posts</a></li>
+                  <li><a href="{{ url_for('aboutUsPage') }}">About Us</a></li>
+                  <li><a href="{{ url_for('homePage') }}">Home</a></li>
+                  
+                </ul>
+              </nav></strong>
+          </header>
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <ul>
+            {% for message in messages %}
+            <li id = "flash">{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        {% endwith %}
+        {% block content %}{% endblock %}
+    </body>
+</html>
+
